@@ -15,6 +15,7 @@ def escuchar(sock):
         try:
             data = sock.recvfrom(bufferSize)
             print(data[0].decode('utf-8')) 
+            print('Escriba su mensaje: ')
         except:
             sock.close()
             os._exit(1)

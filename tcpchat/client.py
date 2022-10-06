@@ -6,6 +6,7 @@ def escuchar(socket):
     while(True):
         data = socket.recv(1024)
         print(data.decode('utf-8')) 
+        print('Escriba su mensaje: ')
 def enviar(socket):
     while(True):
         entrada = input()
@@ -18,7 +19,7 @@ def enviar(socket):
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # Connect the socket to the port where the server is listening
-server_address = ('10.10.17.168', 1234)
+server_address = ('10.10.17.191', 10000)
 print('connecting to %s port %s' % server_address)
 sock.connect(server_address)
 
